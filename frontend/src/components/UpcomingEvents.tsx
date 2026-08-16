@@ -88,7 +88,7 @@ const UpcomingEvents = () => {
                   title={event.title}
                   description={event.shortDescription}
                   location={event.venue}
-                  imageUrl={event.bannerUrl || 'https://via.placeholder.com/600x400?text=IEEE+Event'}
+                  imageUrl={event.bannerUrl || '/pics/p5.PNG'}
                   animationDelay={i * 0.1}
                 />
               </Link>

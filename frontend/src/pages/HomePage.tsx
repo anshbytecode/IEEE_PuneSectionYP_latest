@@ -69,15 +69,7 @@ const HomePage = () => (
         <UpcomingEvents />
       </motion.div>
 
-      {/* Highlights Section */}
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-120px" }}
-        variants={scrollRevealVariants}
-      >
-        <HighlightsSection />
-      </motion.div>
+
 
       {/* Explore Section */}
       <motion.div

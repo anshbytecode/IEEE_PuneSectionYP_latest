@@ -222,7 +222,7 @@ export const PublicEvents: React.FC = () => {
                       {/* Banner Wrapper */}
                       <div style={{ margin: '-20px -20px 18px -20px', height: '180px', position: 'relative', overflow: 'hidden' }}>
                         <img
-                          src={event.bannerUrl || 'https://via.placeholder.com/600x400?text=IEEE+Event'}
+                          src={event.bannerUrl || '/pics/p4.PNG'}
                           alt={event.title}
                           style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                         />

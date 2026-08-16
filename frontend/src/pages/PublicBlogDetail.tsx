@@ -114,7 +114,7 @@ export const PublicBlogDetail: React.FC = () => {
       <div className="max-w-4xl mx-auto px-4 mt-6">
         <div className="relative h-80 md:h-[400px] rounded-2xl overflow-hidden border border-gray-200 shadow-md">
           <img
-            src={blog.thumbnailUrl || 'https://via.placeholder.com/1200x600?text=IEEE+Blog+Banner'}
+            src={blog.thumbnailUrl || '/pics/b2.PNG'}
             alt={blog.title}
             className="w-full h-full object-cover"
           />

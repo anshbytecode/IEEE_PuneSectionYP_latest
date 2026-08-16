@@ -131,7 +131,7 @@ const createBlog = async (req, res) => {
       return res.status(400).json({ success: false, message: 'Title and content are required.' });
     }
 
-    let thumbnailUrl = 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=800&h=500&q=80';
+    let thumbnailUrl = '/pics/b1.PNG';
     const files = req.files || {};
 
     if (files.thumbnail && files.thumbnail[0]) {

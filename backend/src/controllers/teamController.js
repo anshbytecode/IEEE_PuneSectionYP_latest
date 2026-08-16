@@ -27,7 +27,7 @@ const createTeamMember = async (req, res) => {
       return res.status(400).json({ success: false, message: 'Name and position are required.' });
     }
 
-    let profileImageUrl = 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=250&h=250&q=80';
+    let profileImageUrl = '/drive-download/member1.jpg';
     const files = req.files || {};
 
     if (files.profileImage && files.profileImage[0]) {

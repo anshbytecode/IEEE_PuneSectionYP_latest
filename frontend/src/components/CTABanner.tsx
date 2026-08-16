@@ -29,7 +29,7 @@ const CTABanner = () => (
       <div className="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
         {/* Primary button */}
         <a
-          href="https://www.ieee.org/membership/join/index.html"
+          href="https://www.ieee.org/membership-catalog/productdetail/showProductDetailPage.html?product=MEMYP060"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-gradient-to-r from-ieee-blue to-ieee-teal text-white font-bold px-8 py-3.5 rounded-full hover:shadow-lg hover:scale-105 transition-all w-full sm:w-auto text-center cursor-pointer uppercase tracking-wider text-xs shadow-md"

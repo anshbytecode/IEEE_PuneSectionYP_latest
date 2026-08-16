@@ -80,7 +80,7 @@ const seedDb = async () => {
           data: {
             name,
             code,
-            logoUrl: `https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=400&q=80`,
+            logoUrl: `/pics/b1.PNG`,
             established: new Date('2015-01-01'),
             officers: {
               create: [

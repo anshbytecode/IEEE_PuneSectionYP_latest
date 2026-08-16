@@ -145,161 +145,16 @@ interface ActivityPageStat {
   label: string;
 }
 
-/* ── Fallback Historical & Planned Activities of IEEE Pune Section ─────── */
 const DEFAULT_IEEE_ACTIVITIES: EventItem[] = [
   {
-    id: 'evt-agm-2026',
-    title: 'IEEE Pune Section Annual General Meeting 2026',
-    shortDescription: 'Annual gathering of IEEE Pune Section members, reporting chapter highlights, financial reports, and electing new office bearers.',
-    fullDescription: 'The Annual General Meeting (AGM) 2026 brought together section leadership, student branch counselors, and young professional members across Pune.',
-    bannerUrl: 'https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=800&auto=format&fit=crop',
-    galleryUrls: [],
-    eventDate: '2026-02-15T10:00:00.000Z',
-    venue: 'COEP Technological University, Pune',
-    sdgAlignment: ['Quality Education', 'Industry & Innovation'],
-    category: 'Flagship',
-    status: 'Completed',
-    isDeleted: false,
-    createdAt: '2026-01-01T00:00:00.000Z',
-    updatedAt: '2026-01-01T00:00:00.000Z'
-  },
-  {
-    id: 'evt-ai-workshop-2026',
-    title: 'Hands-On AI & Machine Learning Bootcamp',
-    shortDescription: 'Full-day workshop on modern deep learning architectures, Transformer models, and edge AI deployment.',
-    fullDescription: 'Interactive technical workshop hosted by IEEE YP Pune focusing on applied AI models for engineering students and young developers.',
-    bannerUrl: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=800&auto=format&fit=crop',
-    galleryUrls: [],
-    eventDate: '2026-01-24T09:30:00.000Z',
-    venue: 'PICT Campus, Dhankawadi, Pune',
-    sdgAlignment: ['Quality Education', 'Decent Work'],
-    category: 'Workshop',
-    status: 'Completed',
-    isDeleted: false,
-    createdAt: '2026-01-01T00:00:00.000Z',
-    updatedAt: '2026-01-01T00:00:00.000Z'
-  },
-  {
-    id: 'evt-sb-leadership-2025',
-    title: 'IEEE Pune Student Branch Officers Leadership Summit',
-    shortDescription: 'Leadership training, vTools reporting session, and activity planning for student branch chairs and vice-chairs.',
-    fullDescription: 'Section-level leadership congress empowering 30+ Student Branches in Pune section with best practices in event organization and funding.',
-    bannerUrl: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=800&auto=format&fit=crop',
-    galleryUrls: [],
-    eventDate: '2025-12-12T11:00:00.000Z',
-    venue: 'MIT World Peace University, Pune',
-    sdgAlignment: ['Partnerships for the Goals'],
-    category: 'Leadership',
-    status: 'Completed',
-    isDeleted: false,
-    createdAt: '2025-11-01T00:00:00.000Z',
-    updatedAt: '2025-11-01T00:00:00.000Z'
-  },
-  {
-    id: 'evt-industry-connect-2025',
-    title: 'Industry Connect & Corporate Networking Evening',
-    shortDescription: 'Bridging the gap between academia and IT/Engineering leaders in Hinjawadi and Magarpatta tech parks.',
-    fullDescription: 'Networking meetup for Young Professionals with industry architects from Tata Motors, Tech Mahindra, and Persistent Systems.',
-    bannerUrl: 'https://images.unsplash.com/photo-1515187029135-18ee286d815b?q=80&w=800&auto=format&fit=crop',
-    galleryUrls: [],
-    eventDate: '2025-11-18T17:30:00.000Z',
-    venue: 'Persistent Systems Tech Center, Pune',
-    sdgAlignment: ['Industry & Innovation'],
-    category: 'Industry Connect',
-    status: 'Completed',
-    isDeleted: false,
-    createdAt: '2025-10-01T00:00:00.000Z',
-    updatedAt: '2025-10-01T00:00:00.000Z'
-  },
-  {
-    id: 'evt-ieee-day-2025',
-    title: 'IEEE Day — Innoverse Build-A-Thon 2025',
-    shortDescription: 'Celebration of IEEE Day with prototype demo competition, technical keynotes, and student project awards.',
-    fullDescription: 'Flagship IEEE Day event hosted at MMCOE Pune celebrating technological innovation for global challenges.',
-    bannerUrl: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=800&auto=format&fit=crop',
-    galleryUrls: [],
-    eventDate: '2025-10-04T09:00:00.000Z',
-    venue: 'MMCOE Auditorium, Pune',
-    sdgAlignment: ['Industry & Innovation'],
-    category: 'Flagship',
-    status: 'Completed',
-    isDeleted: false,
-    createdAt: '2025-09-01T00:00:00.000Z',
-    updatedAt: '2025-09-01T00:00:00.000Z'
-  },
-  {
-    id: 'evt-codebhoomi-phase1-2025',
-    title: 'IEEE CODEBhoomi Rural Literacy Outreach Phase I',
-    shortDescription: 'Deployment of digital learning kits and computer training modules in rural school centers near Pune.',
-    fullDescription: 'USD 5000 IEEE HAC funded project empowering rural youth with foundational computer literacy and STEM tools.',
-    bannerUrl: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800&auto=format&fit=crop',
-    galleryUrls: [],
-    eventDate: '2025-09-15T09:00:00.000Z',
-    venue: 'Bhor Rural Community Center, Pune District',
-    sdgAlignment: ['Quality Education', 'Reduced Inequalities'],
-    category: 'Flagship',
-    status: 'Completed',
-    isDeleted: false,
-    createdAt: '2025-08-01T00:00:00.000Z',
-    updatedAt: '2025-08-01T00:00:00.000Z'
-  },
-  {
-    id: 'evt-mentorship-2025',
-    title: 'YP Mentorship & Career Guidance Colloquium',
-    shortDescription: 'Panel session with senior IEEE senior members guiding early-career engineers on higher studies and patents.',
-    fullDescription: 'Structured 1-on-1 and group mentorship sessions covering research paper publishing and IEEE Senior Member elevation.',
-    bannerUrl: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=800&auto=format&fit=crop',
-    galleryUrls: [],
-    eventDate: '2025-08-10T14:00:00.000Z',
-    venue: 'VIT Pune, Bibwewadi',
-    sdgAlignment: ['Quality Education', 'Decent Work'],
-    category: 'Tech Talk',
-    status: 'Completed',
-    isDeleted: false,
-    createdAt: '2025-07-01T00:00:00.000Z',
-    updatedAt: '2025-07-01T00:00:00.000Z'
-  },
-  {
-    id: 'evt-wie-yp-panel-2025',
-    title: 'Women in Tech & YP Joint Diversity Symposium',
-    shortDescription: 'Joint event highlighting leadership stories of female tech leaders and young innovators in Pune.',
-    fullDescription: 'Keynote addresses, startup pitches, and diversity in engineering discussions co-hosted by IEEE WIE & IEEE YP Pune.',
-    bannerUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop',
-    galleryUrls: [],
-    eventDate: '2025-06-22T10:00:00.000Z',
-    venue: 'Cummins College of Engineering for Women, Pune',
-    sdgAlignment: ['Gender Equality'],
-    category: 'Networking',
-    status: 'Completed',
-    isDeleted: false,
-    createdAt: '2025-05-01T00:00:00.000Z',
-    updatedAt: '2025-05-01T00:00:00.000Z'
-  },
-  {
-    id: 'evt-paper-writing-2025',
-    title: 'Research Paper Writing & Publication Ethics Workshop',
-    shortDescription: 'Guide to writing high-impact IEEE transactions papers, handling peer review comments, and avoiding predatory journals.',
-    fullDescription: 'Expert session led by IEEE Fellow speakers covering IEEE Xplore indexing and LaTeX paper formatting.',
-    bannerUrl: 'https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=800&auto=format&fit=crop',
-    galleryUrls: [],
-    eventDate: '2025-04-14T11:00:00.000Z',
-    venue: 'Online (Cisco Webex)',
-    sdgAlignment: ['Quality Education'],
-    category: 'Technical',
-    status: 'Completed',
-    isDeleted: false,
-    createdAt: '2025-03-01T00:00:00.000Z',
-    updatedAt: '2025-03-01T00:00:00.000Z'
-  },
-  {
     id: 'evt-codebhoomi-2026',
-    title: 'IEEE CODEBhoomi — Tech for Humanity Hackathon 2026',
-    shortDescription: 'Closing phase hackathon of the CODEBhoomi initiative. Teams build solutions for rural community challenges in digital literacy.',
-    fullDescription: 'Regional hackathon bringing tech solutions to rural problems.',
-    bannerUrl: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=800&auto=format&fit=crop',
+    title: 'IEEE CODEBhoomi 2026 Hackathon',
+    shortDescription: 'A flagship technology initiative bringing young engineers and innovators together to build impactful solutions for real-world challenges.',
+    fullDescription: 'IEEE CODEBhoomi 2026 Hackathon is a flagship initiative of IEEE Young Professionals Pune Section focused on innovation, collaboration and technology for humanity.',
+    bannerUrl: '/pic_ieeeupload/CB.jpeg',
     galleryUrls: [],
     eventDate: '2026-03-28T09:00:00.000Z',
-    venue: 'COEP Tech Campus, Pune',
+    venue: 'Pune',
     sdgAlignment: ['Quality Education', 'Industry & Innovation'],
     category: 'Flagship',
     status: 'Upcoming',
@@ -307,33 +162,103 @@ const DEFAULT_IEEE_ACTIVITIES: EventItem[] = [
     createdAt: '2026-01-01T00:00:00.000Z',
     updatedAt: '2026-01-01T00:00:00.000Z'
   },
+
   {
-    id: 'evt-congress-2026',
-    title: 'IEEE Pune Section Congress 2026',
-    shortDescription: 'Section-level congress bringing together volunteers, leaders and chapter representatives for governance and strategic planning.',
-    fullDescription: 'Annual congress of Pune Section leadership.',
-    bannerUrl: 'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=800&auto=format&fit=crop',
+    id: 'evt-innovation-inclave-2026',
+    title: 'Innovation Inclave',
+    shortDescription: 'An innovation-focused gathering connecting engineers, professionals, innovators and technology enthusiasts.',
+    fullDescription: 'Innovation Inclave brings together professionals and young innovators to exchange ideas, explore emerging technologies and create meaningful collaborations.',
+    bannerUrl: '/pic_ieeeupload/IC.jpeg',
     galleryUrls: [],
     eventDate: '2026-04-18T09:30:00.000Z',
-    venue: 'Hotel Pride Executive, University Road, Pune',
-    sdgAlignment: ['Partnerships for the Goals'],
+    venue: 'Pune',
+    sdgAlignment: ['Industry & Innovation', 'Partnerships for the Goals'],
+    category: 'Networking',
+    status: 'Upcoming',
+    isDeleted: false,
+    createdAt: '2026-01-01T00:00:00.000Z',
+    updatedAt: '2026-01-01T00:00:00.000Z'
+  },
+
+  {
+    id: 'evt-upskills-2026',
+    title: 'Up Skills',
+    shortDescription: 'A skill-development initiative designed to help young engineers strengthen their technical and professional capabilities.',
+    fullDescription: 'Up Skills provides practical learning opportunities, technical knowledge and career-focused guidance for students and early-career professionals.',
+    bannerUrl: '/pic_ieeeupload/s1.png',
+    galleryUrls: [],
+    eventDate: '2026-05-10T15:00:00.000Z',
+    venue: 'Pune',
+    sdgAlignment: ['Quality Education', 'Decent Work'],
+    category: 'Workshop',
+    status: 'Upcoming',
+    isDeleted: false,
+    createdAt: '2026-01-01T00:00:00.000Z',
+    updatedAt: '2026-01-01T00:00:00.000Z'
+  },
+
+  {
+    id: 'evt-aerospace-2026',
+    title: 'All About a Career in Aerospace',
+    shortDescription: 'An expert-oriented session exploring career opportunities, skills and pathways in the aerospace industry.',
+    fullDescription: 'All About a Career in Aerospace introduces students and young professionals to aerospace careers, industry opportunities and the skills required to build a successful career.',
+    bannerUrl: '/pic_ieeeupload/p2.png',
+    galleryUrls: [],
+    eventDate: '2026-06-14T10:00:00.000Z',
+    venue: 'Pune',
+    sdgAlignment: ['Quality Education', 'Decent Work'],
+    category: 'Technical',
+    status: 'Upcoming',
+    isDeleted: false,
+    createdAt: '2026-01-01T00:00:00.000Z',
+    updatedAt: '2026-01-01T00:00:00.000Z'
+  },
+
+  {
+    id: 'evt-innoverse-2026',
+    title: 'Innoverse',
+    shortDescription: 'An innovation and technology event showcasing ideas, projects and solutions developed by young innovators.',
+    fullDescription: 'Innoverse creates a platform for students, young professionals and innovators to showcase technological ideas and explore new possibilities.',
+    bannerUrl: '/pic_ieeeupload/innoverse.jpg',
+    galleryUrls: [],
+    eventDate: '2026-07-04T09:00:00.000Z',
+    venue: 'Pune',
+    sdgAlignment: ['Industry & Innovation'],
     category: 'Flagship',
     status: 'Upcoming',
     isDeleted: false,
     createdAt: '2026-01-01T00:00:00.000Z',
     updatedAt: '2026-01-01T00:00:00.000Z'
   },
+
   {
-    id: 'evt-cpds-2026',
-    title: 'Career Path Discovery Series 2026',
-    shortDescription: 'Two virtual sessions with experienced professionals sharing structured insights on career pathways for early-career engineers.',
-    fullDescription: 'Career development webinar series.',
-    bannerUrl: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800&auto=format&fit=crop',
+    id: 'evt-hack-humanity-2026',
+    title: 'Hack for Humanity',
+    shortDescription: 'A collaborative hackathon encouraging participants to develop technology-driven solutions addressing societal challenges.',
+    fullDescription: 'Hack for Humanity brings developers, designers and innovators together to build technology solutions that create positive social impact.',
+    bannerUrl: '/pic_ieeeupload/hackh.jpg',
     galleryUrls: [],
-    eventDate: '2026-05-10T15:00:00.000Z',
-    venue: 'Online (Zoom Webinar)',
-    sdgAlignment: ['Decent Work'],
-    category: 'Leadership',
+    eventDate: '2026-08-08T09:00:00.000Z',
+    venue: 'Pune',
+    sdgAlignment: ['Reduced Inequalities', 'Industry & Innovation'],
+    category: 'Hackathon',
+    status: 'Upcoming',
+    isDeleted: false,
+    createdAt: '2026-01-01T00:00:00.000Z',
+    updatedAt: '2026-01-01T00:00:00.000Z'
+  },
+
+  {
+    id: 'evt-tech-good-2026',
+    title: 'Tech For Good Hackathon',
+    shortDescription: 'A technology-focused hackathon where participants develop innovative solutions aimed at creating positive social and community impact.',
+    fullDescription: 'Tech For Good Hackathon encourages young engineers and innovators to use technology to address real-world challenges and contribute towards a better society.',
+    bannerUrl: '/pic_ieeeupload/techg.jpg',
+    galleryUrls: [],
+    eventDate: '2026-09-12T09:00:00.000Z',
+    venue: 'Pune',
+    sdgAlignment: ['Quality Education', 'Reduced Inequalities', 'Industry & Innovation'],
+    category: 'Hackathon',
     status: 'Upcoming',
     isDeleted: false,
     createdAt: '2026-01-01T00:00:00.000Z',
@@ -352,6 +277,25 @@ const ActivitiesPage = () => {
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
   const [currentCalendarDate, setCurrentCalendarDate] = useState<Date>(new Date());
   const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  // Sliding Window Protocol Buffer for Event Posters
+  const [posterSlideIndex, setPosterSlideIndex] = useState(0);
+  const activePosters = useMemo(() => [
+    { id: 'p1', title: 'IEEE CODEBhoomi 2026 Hackathon', img: '/pic_ieeeupload/CB.jpeg', category: 'Flagship 2026' },
+    { id: 'p2', title: 'Innovation Inclave', img: '/pic_ieeeupload/IC.jpeg', category: 'IC' },
+    { id: 'p3', title: 'Up Skills', img: '/pic_ieeeupload/s1.png', category: 'Up Skills' },
+    { id: 'p4', title: 'All about a carrer in aerospace', img: '/pic_ieeeupload/p2.png', category: 'Aerospace' },
+    { id: 'p5', title: 'Innoverse', img: '/pic_ieeeupload/innoverse.jpg', category: 'Innoverse' },
+    { id: 'p6', title: 'Hack for Humanity', img: '/pic_ieeeupload/hackh.jpg', category: 'Hack4Humanity' },
+    { id: 'p7', title: 'Tech For Good Hackathon', img: '/pic_ieeeupload/techg.jpg', category: 'Diversity 2026' }
+  ], []);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setPosterSlideIndex(prev => (prev + 1) % activePosters.length);
+    }, 4500);
+    return () => clearInterval(timer);
+  }, [activePosters.length]);
 
   // Fetch events and gallery on load
   useEffect(() => {
@@ -421,7 +365,7 @@ const ActivitiesPage = () => {
         subtitle: event.shortDescription,
         venue: event.venue,
         time: formattedTime,
-        imageUrl: event.bannerUrl || 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=800&auto=format&fit=crop',
+        imageUrl: event.bannerUrl || '/pics/b1.PNG',
         imageAlt: `${event.title} cover`,
       };
     });
@@ -878,6 +822,63 @@ const ActivitiesPage = () => {
                   </div>
                 </div>
               </div>
+
+              {/* SLIDING WINDOW PROTOCOL POSTER CAROUSEL BUFFER */}
+              {!selectedDate && (
+                <div className="mb-8 bg-gradient-to-r from-[#00385e] via-[#004d75] to-[#006a64] rounded-2xl p-6 text-white shadow-lg border border-white/10 relative overflow-hidden">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center gap-2">
+                      <Sparkles size={18} className="text-amber-400 animate-spin" />
+                      <h3 className="text-sm font-extrabold uppercase tracking-widest text-amber-300">
+                        2026 Active Event Posters
+                      </h3>
+                    </div>
+                    <div className="flex items-center gap-1.5 text-xs font-mono text-white/80">
+                      <span>Window Buffer {posterSlideIndex + 1} of {activePosters.length}</span>
+                    </div>
+                  </div>
+
+                  <div className="relative h-64 md:h-72 rounded-xl overflow-hidden bg-black/30 border border-white/15 flex items-center justify-center">
+                    {activePosters.map((poster, pIdx) => (
+                      <div
+                        key={poster.id}
+                        className={`absolute inset-0 w-full h-full flex flex-col md:flex-row items-center justify-between p-6 transition-all duration-700 ${
+                          pIdx === posterSlideIndex ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-95 pointer-events-none'
+                        }`}
+                      >
+                        <div className="flex-1 text-left pr-4">
+                          <span className="text-[11px] font-bold bg-amber-400 text-gray-900 px-3 py-1 rounded-full uppercase tracking-wider mb-3 inline-block">
+                            {poster.category}
+                          </span>
+                          <h2 className="text-2xl md:text-3xl font-extrabold text-white leading-tight mb-2 font-display">
+                            {poster.title}
+                          </h2>
+                          <p className="text-white/80 text-xs md:text-sm max-w-lg leading-relaxed">
+                            Continuous 2026 initiative planned by IEEE Young Professionals Pune Section across local technology hubs and campuses.
+                          </p>
+                        </div>
+                        <div className="w-full md:w-64 h-48 md:h-56 rounded-lg overflow-hidden border-2 border-white/20 shadow-xl shrink-0 mt-4 md:mt-0 bg-white/5">
+                          <img src={poster.img} alt={poster.title} className="w-full h-full object-contain md:object-cover" />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Indicator Dots */}
+                  <div className="flex justify-center gap-2 mt-4">
+                    {activePosters.map((_, dotIdx) => (
+                      <button
+                        key={dotIdx}
+                        onClick={() => setPosterSlideIndex(dotIdx)}
+                        className={`h-2 rounded-full transition-all duration-300 ${
+                          dotIdx === posterSlideIndex ? 'w-8 bg-amber-400' : 'w-2 bg-white/40 hover:bg-white/70'
+                        }`}
+                        aria-label={`Jump to poster slide ${dotIdx + 1}`}
+                      />
+                    ))}
+                  </div>
+                </div>
+              )}
 
               {/* FEATURED EVENT */}
               {!selectedDate && featured && (

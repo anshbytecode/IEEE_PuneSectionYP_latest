@@ -145,7 +145,7 @@ export const PublicEventDetail: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 md:px-8 mt-6">
         <div className="rounded-2xl overflow-hidden shadow-md border border-gray-200 bg-gray-50 flex justify-center items-center p-3 md:p-6 group max-h-[600px]">
           <img
-            src={event.bannerUrl || 'https://via.placeholder.com/1200x600?text=IEEE+Event+Banner'}
+            src={event.bannerUrl || '/pics/b3.PNG'}
             alt={event.title}
             className="max-w-full h-auto max-h-[550px] object-contain rounded-xl shadow-sm group-hover:scale-[1.005] transition-transform duration-350"
           />

@@ -1,13 +1,20 @@
 import { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { Search, Menu, X } from 'lucide-react';
+import { Search, Menu, X, ChevronDown } from 'lucide-react';
 import { navLinks, utilityLinks } from '../data/homePageData';
 import { useAuth } from '../context/AuthContext';
 
 // Resolved asset imports
-import ypLogoImg from '../assets/IeePuneYP_logo.png';
+import ypLogoImg from '/pic_ieeeupload/logonew.jpeg';
 import logoImg    from '../assets/Logo.png';
 
+interface NavLinkItem {
+  id: string;
+  label: string;
+  emoji?: string;
+  href: string;
+  subLinks?: { id: string; label: string; href: string }[];
+}
 
 /**
  * Navbar
@@ -23,28 +30,23 @@ import logoImg    from '../assets/Logo.png';
  */
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const { pathname } = useLocation();
+  const location = useLocation();
   const navigate = useNavigate();
-  const { isAuthenticated, admin, logout } = useAuth();
-
-  const isIEEEAdmin = isAuthenticated && admin && (
-    admin.email.toLowerCase().endsWith('@ieee.org') || 
-    admin.email.toLowerCase().endsWith('@ieeepune.org')
-  );
+  const { isAuthenticated, isIEEEAdmin, logout } = useAuth();
 
   /** Returns true if this nav link is the active page */
-  const isActive = (href: string) => {
-    if (href === '/') return pathname === '/';
-    return pathname.startsWith(href);
+  const isActive = (path: string) => {
+    if (path === '/') return location.pathname === '/';
+    return location.pathname.startsWith(path);
   };
 
 
   return (
     <header role="banner">
 
-      {/* ── Layer 1: Utility bar ───────────────────────────────────────── */}
+      {/* ── Layer 1: Utility bar (Right aligned) ───────────────────────── */}
       <div className="bg-gray-100 border-b border-gray-200">
-        <div className="max-w-7xl mx-auto h-8 flex items-center px-4 md:px-8">
+        <div className="max-w-7xl mx-auto h-8 flex items-center justify-end px-4 md:px-8">
           <nav
             className="flex items-center flex-wrap text-gray-600 text-xs font-bold gap-0"
             aria-label="Global IEEE sites"
@@ -97,39 +99,70 @@ const Navbar = () => {
             />
           ))}
         </svg>
-
         {/* Content row */}
-        <div className="relative max-w-7xl mx-auto h-full flex items-center justify-between px-4 md:px-8 py-5">
+        <div className="relative max-w-7xl mx-auto h-full flex items-center justify-between px-4 md:px-8 py-4">
 
-          {/* Left: YP Logo image — slightly larger */}
-          <a href="/" aria-label="IEEE YP Pune — go to homepage">
-            <img
-              src={ypLogoImg}
-              alt="IEEE YP Pune"
-              className="h-16 md:h-20 w-auto object-contain hover:scale-105 transition-transform duration-300"
+          {/* Left: IEEE Global Logo + 10 Years YP Pune Logo */}
+          <div className="flex items-center gap-3 md:gap-5">
+
+            <a
+              href="https://www.ieee.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="IEEE global website"
+            >
+              <img
+                src={logoImg}
+                alt="IEEE"
+                className="h-10 md:h-10 w-auto object-contain hover:scale-105 transition-transform duration-300"
+              />
+            </a>
+
+            <div
+              className="h-10 w-px bg-gray-200"
+              aria-hidden="true"
             />
-          </a>
 
-          {/* Right: Search + divider + IEEE diamond logo + hamburger */}
+            <a
+              href="/"
+              aria-label="IEEE YP Pune — go to homepage"
+              className="flex items-center gap-2"
+            >
+              <img
+                src={ypLogoImg}
+                alt="IEEE YP Pune 10 Years"
+                className="h-32 md:h-28 w-auto object-contain hover:scale-105 transition-transform duration-300"
+              />
+            </a>
+
+          </div>
+
+         {/* Pune Vibes + Second Image */}
+<div className="hidden lg:flex flex-1 justify-center items-center gap-4 px-6">
+  
+  <img
+    src="/pic_ieeeupload/punevibe.png"
+    alt="Pune city skyline and landmarks"
+    className="h-32 w-auto object-contain -my-6"
+  />
+
+  <img
+    src="/pic_ieeeupload/punevibe2.png"
+    alt="Pune"
+    className="h-38 w-auto object-contain -my-6"
+  />
+
+</div>
+
+          {/* Right: Search + Hamburger */}
           <div className="flex items-center gap-4">
+
             <button
               aria-label="Search site"
               className="text-gray-500 hover:text-ieee-blue hover:bg-ieee-light hover:scale-105 transition-all duration-200 p-2 rounded-full cursor-pointer"
             >
               <Search size={20} aria-hidden="true" />
             </button>
-
-            {/* Vertical divider */}
-            <div className="h-8 w-px bg-gray-300" aria-hidden="true" />
-
-            {/* IEEE diamond logo */}
-            <a href="https://www.ieee.org" target="_blank" rel="noopener noreferrer" aria-label="IEEE global website">
-              <img
-                src={logoImg}
-                alt="IEEE"
-                className="h-11 w-auto object-contain hover:scale-105 transition-transform duration-300"
-              />
-            </a>
 
             {/* Hamburger — mobile only */}
             <button
@@ -145,7 +178,9 @@ const Navbar = () => {
                 <Menu size={24} aria-hidden="true" />
               )}
             </button>
+
           </div>
+
         </div>
       </div>
 
@@ -156,24 +191,41 @@ const Navbar = () => {
       >
         <div className="max-w-7xl mx-auto flex items-stretch justify-between px-4 md:px-8">
           <div className="flex items-stretch justify-center flex-grow">
-            {navLinks.map((link) => (
-              <a
-                key={link.id}
-                href={link.href}
-                className={`flex items-center justify-center text-white text-sm font-bold px-5 py-4 transition-all duration-200 whitespace-nowrap tracking-wide uppercase hover:text-ieee-teal relative group ${
-                  isActive(link.href)
-                    ? 'text-ieee-teal font-extrabold'
-                    : ''
-                }`}
-                aria-current={isActive(link.href) ? 'page' : undefined}
-              >
-                <span>{link.label}</span>
-                <span className={`absolute bottom-0 left-0 right-0 h-1 transition-all duration-300 rounded-t-full ${
-                  isActive(link.href)
-                    ? 'bg-ieee-teal shadow-[0_0_8px_rgba(0,178,169,0.8)] scale-x-100'
-                    : 'bg-white/40 scale-x-0 group-hover:scale-x-100'
-                }`} />
-              </a>
+            {(navLinks as NavLinkItem[]).map((link) => (
+              <div key={link.id} className="relative group flex items-center">
+                <a
+                  href={link.href}
+                  className={`flex items-center justify-center text-white text-sm font-bold px-5 py-4 transition-all duration-200 whitespace-nowrap tracking-wide uppercase hover:text-ieee-teal relative gap-1.5 ${
+                    isActive(link.href)
+                      ? 'text-ieee-teal font-extrabold'
+                      : ''
+                  }`}
+                  aria-current={isActive(link.href) ? 'page' : undefined}
+                >
+                  <span>{link.label}</span>
+                  {link.subLinks && <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-200" />}
+                  <span className={`absolute bottom-0 left-0 right-0 h-1 transition-all duration-300 rounded-t-full ${
+                    isActive(link.href)
+                      ? 'bg-ieee-teal shadow-[0_0_8px_rgba(0,178,169,0.8)] scale-x-100'
+                      : 'bg-white/40 scale-x-0 group-hover:scale-x-100'
+                  }`} />
+                </a>
+
+                {/* Sublinks Dropdown */}
+                {link.subLinks && (
+                  <div className="absolute top-full left-0 hidden group-hover:block w-56 bg-white border border-gray-100 rounded-b-xl shadow-xl z-50 py-2">
+                    {link.subLinks.map((sub) => (
+                      <a
+                        key={sub.id}
+                        href={sub.href}
+                        className="block px-4 py-2.5 text-xs font-bold text-gray-700 hover:bg-ieee-light hover:text-ieee-blue transition-colors"
+                      >
+                        {sub.label}
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </div>
             ))}
           </div>
 

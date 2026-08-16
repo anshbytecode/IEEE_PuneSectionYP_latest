@@ -1,6 +1,7 @@
 import { MapPin, Mail } from 'lucide-react';
 import { footerQuickLinks, footerResourceLinks } from '../data/homePageData';
-
+import ypLogoImg from '/pic_ieeeupload/logonew.jpeg';
+import logoImg from '../assets/Logo.png';
 
 // Inline SVG icons — lucide-react version in this project does not export Linkedin or Instagram
 
@@ -56,11 +57,11 @@ interface FooterLink {
 /**
  * Footer
  * Dark navy footer with 4-column grid:
- *   1. Brand (IEEE YP Pune three-line logo + description + real social icons)
+ *   1. Brand (IEEE YP Pune official logo graphic + description + real social icons)
  *   2. Quick Links (YP-specific pages)
  *   3. Resources (YP-specific resources)
  *   4. Contact
- * Bottom bar contains copyright + mandatory IEEE legal links.
+ * Bottom bar contains logo graphic + copyright + legal links.
  */
 const Footer = () => (
   <footer className="bg-ieee-dark" role="contentinfo">
@@ -69,14 +70,14 @@ const Footer = () => (
 
       {/* Col 1 — Brand */}
       <div>
-        <div className="mb-3">
-          <span className="text-2xl font-bold text-ieee-teal">IEEE</span>
-          <span className="block text-white font-semibold text-lg leading-tight">
-            Young Professionals
-          </span>
-          <span className="block text-gray-400 font-medium text-sm leading-snug">
-            Pune Section
-          </span>
+        <div className="mb-4">
+          <a href="/" aria-label="IEEE YP Pune Homepage">
+            <img
+              src={ypLogoImg}
+              alt="IEEE YP Pune Logo"
+              className="h-25 w-auto object-contain hover:scale-105 transition-transform bg-white/95 p-2 rounded-lg"
+            />
+          </a>
         </div>
         <p className="text-gray-400 text-sm leading-relaxed">
           Connecting early-career engineers and technologists across the Pune region since 2016.
@@ -181,24 +182,27 @@ const Footer = () => (
     </div>
 
     {/* ── Bottom bar ────────────────────────────────────────── */}
-    <div className="border-t border-white/10 py-4 px-4">
-      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
-        <p className="text-gray-500 text-xs">
-          © 2026 IEEE YP Pune Section. All rights reserved.
-        </p>
+    <div className="border-t border-white/10 py-6 px-4">
+      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="flex items-center gap-3">
+          <img src={logoImg} alt="IEEE Logo" className="h-8 w-auto object-contain bg-white/90 p-1.5 rounded" />
+          <p className="text-gray-400 text-xs font-medium">
+            © 2026 IEEE YP Pune Section. All rights reserved.
+          </p>
+        </div>
 
         {/* Mandatory IEEE legal links */}
         <nav aria-label="Legal and policy links">
-          <span className="text-gray-500 text-xs flex items-center gap-2 flex-wrap justify-center">
-            <a href="#" className="hover:text-gray-300 transition-colors">
+          <span className="text-gray-400 text-xs flex items-center gap-2 flex-wrap justify-center font-medium">
+            <a href="#" className="hover:text-white transition-colors">
               Privacy Policy
             </a>
-            <span className="text-gray-700 select-none">|</span>
-            <a href="#" className="hover:text-gray-300 transition-colors">
+            <span className="text-gray-600 select-none">|</span>
+            <a href="#" className="hover:text-white transition-colors">
               Terms of Use
             </a>
-            <span className="text-gray-700 select-none">|</span>
-            <a href="#" className="hover:text-gray-300 transition-colors">
+            <span className="text-gray-600 select-none">|</span>
+            <a href="#" className="hover:text-white transition-colors">
               Accessibility
             </a>
           </span>

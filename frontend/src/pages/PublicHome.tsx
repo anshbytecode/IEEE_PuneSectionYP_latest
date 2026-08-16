@@ -200,7 +200,7 @@ export const PublicHome: React.FC = () => {
                     {/* Banner Image Container */}
                     <div className="relative h-44 overflow-hidden rounded-xl mb-5 group">
                       <img 
-                        src={event.bannerUrl || 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=800'} 
+                        src={event.bannerUrl || '/pics/p1.PNG'} 
                         alt={event.title} 
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                       />
@@ -318,7 +318,7 @@ export const PublicHome: React.FC = () => {
                     {/* Cover Photo */}
                     <div className="relative h-44 overflow-hidden rounded-xl mb-5 group">
                       <img 
-                        src={blog.thumbnailUrl || 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800'} 
+                        src={blog.thumbnailUrl || '/pics/p2.PNG'} 
                         alt={blog.title} 
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                       />

@@ -200,7 +200,7 @@ export const PublicBlogs: React.FC = () => {
                   {/* Thumbnail */}
                   <div className="relative h-48 overflow-hidden shrink-0">
                     <img
-                      src={blog.thumbnailUrl || 'https://via.placeholder.com/600x400?text=IEEE+Blog'}
+                      src={blog.thumbnailUrl || '/pics/p3.PNG'}
                       alt={blog.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       loading="lazy"

@@ -2,9 +2,6 @@ import { useState, useEffect, useCallback } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { heroSlides, featuredAchievement } from '../data/homePageData';
 
-// TODO: Replace static heroSlides with GET /api/carousel-slides
-// TODO: Replace static featuredAchievement with GET /api/achievements?featured=true
-
 interface HeroSlide {
   id: number;
   badge: string;
@@ -12,19 +9,9 @@ interface HeroSlide {
   subtitle: string;
   imageUrl: string;
   imageAlt: string;
+  imageSize?: string;
 }
 
-/**
- * HeroSection
- * Outer section: bg-gray-50, py-6 px-4 → gives the "framed" look from the reference image.
- * Inner layout: max-w-7xl container, rounded-lg overflow-hidden, shadow.
- *
- * Two columns inside the frame (~60/40):
- *   LEFT  — image carousel (crossfade, 5 slides, dot indicators, prev/next arrows)
- *   RIGHT — achievement card (badge, title, image, body text, "Read more" link)
- *
- * On mobile the columns stack vertically (carousel first, then card).
- */
 const HeroSection = () => {
   const [current, setCurrent] = useState(0);
   const total = heroSlides.length;
@@ -33,12 +20,12 @@ const HeroSection = () => {
     () => setCurrent((c) => (c - 1 + total) % total),
     [total]
   );
+
   const goNext = useCallback(
     () => setCurrent((c) => (c + 1) % total),
     [total]
   );
 
-  // Auto-advance every 5 seconds
   useEffect(() => {
     const timer = setInterval(goNext, 5000);
     return () => clearInterval(timer);
@@ -51,43 +38,53 @@ const HeroSection = () => {
       className="bg-gray-50 py-8 px-4 md:px-8"
       aria-label="Featured event and achievement"
     >
-      {/* ── Framed card container ─────────────────────────────────── */}
       <div className="max-w-7xl mx-auto rounded-xl overflow-hidden shadow-md flex flex-col lg:flex-row">
 
-        {/* ── LEFT: Carousel ─────────────────────────────────────── */}
+        {/* LEFT: Carousel */}
         <div
           className="relative lg:w-3/5 w-full overflow-hidden"
           style={{ minHeight: '320px' }}
           aria-label="Event carousel"
           aria-roledescription="carousel"
         >
-          {/* Slide images with crossfade */}
-          {(heroSlides as HeroSlide[]).map((s, i: number) => (
-            <img
-              key={s.id}
-              src={s.imageUrl}
-              alt={s.imageAlt}
-              className={`absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-out ${i === current ? 'opacity-100 scale-105' : 'opacity-0 scale-100'
-                }`}
-              aria-hidden={i !== current}
-            />
-          ))}
+
+         {/* Slide images */}
+{(heroSlides as HeroSlide[]).map((s, i: number) => (
+  <div
+    key={s.id}
+    className={`absolute inset-0 w-full h-full flex items-center justify-center transition-opacity duration-1000 ${
+      i === current ? 'opacity-100' : 'opacity-0'
+    }`}
+    aria-hidden={i !== current}
+  >
+    <img
+      src={s.imageUrl}
+      alt={s.imageAlt}
+      className={
+        s.title === 'Posters'
+          ? 'w-[100%] h-[100%] object-contain'
+          : 'w-full h-full object-cover'
+      }
+    />
+  </div>
+))}
 
           {/* Dark gradient overlay */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/35 to-black/10 pointer-events-none" />
 
-          {/* Badge top-left */}
+          {/* Badge */}
           <div className="absolute top-4 left-4 z-10">
             <span className="bg-ieee-teal text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wide">
               {slide.badge}
             </span>
           </div>
 
-          {/* Title + subtitle — bottom left */}
+          {/* Title + subtitle */}
           <div className="absolute bottom-14 left-4 right-14 z-10">
             <h1 className="text-white text-3xl font-bold leading-tight mb-2">
               {slide.title}
             </h1>
+
             <p className="text-white/80 text-sm leading-relaxed">
               {slide.subtitle}
             </p>
@@ -106,15 +103,16 @@ const HeroSection = () => {
                 aria-selected={i === current}
                 aria-label={`Go to slide ${i + 1}`}
                 onClick={() => setCurrent(i)}
-                className={`h-2 rounded-full transition-all duration-300 ${i === current
+                className={`h-2 rounded-full transition-all duration-300 ${
+                  i === current
                     ? 'w-6 bg-ieee-teal shadow-[0_0_8px_rgba(0,178,169,0.8)]'
                     : 'w-2 bg-white/50 hover:bg-white/80'
-                  }`}
+                }`}
               />
             ))}
           </div>
 
-          {/* Prev arrow */}
+          {/* Previous */}
           <button
             onClick={goPrev}
             aria-label="Previous slide"
@@ -123,7 +121,7 @@ const HeroSection = () => {
             <ChevronLeft size={20} aria-hidden="true" />
           </button>
 
-          {/* Next arrow */}
+          {/* Next */}
           <button
             onClick={goNext}
             aria-label="Next slide"
@@ -133,12 +131,11 @@ const HeroSection = () => {
           </button>
         </div>
 
-        {/* ── RIGHT: Achievement card ──────────────────────────── */}
+        {/* RIGHT: Achievement card */}
         <div
           className="lg:w-2/5 w-full bg-gradient-to-b from-white to-gray-50/50 p-6 flex flex-col border-l border-gray-100 relative group"
           aria-label="Featured achievement"
         >
-          {/* Subtle top border glow for the group card */}
           <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-ieee-teal to-ieee-blue opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
           {/* Badge */}
@@ -151,7 +148,7 @@ const HeroSection = () => {
             {featuredAchievement.title}
           </h2>
 
-          {/* Image Container with Zoom */}
+          {/* Image */}
           <div className="w-full h-40 overflow-hidden rounded-md mb-4">
             <img
               src={featuredAchievement.imageUrl}
@@ -161,19 +158,21 @@ const HeroSection = () => {
             />
           </div>
 
-          {/* Body text */}
+          {/* Body */}
           <p className="text-sm text-gray-600 leading-relaxed flex-1">
             {featuredAchievement.body}
           </p>
 
-          {/* Read more with moving arrow */}
+          {/* Read more */}
           <a
             href={featuredAchievement.linkHref}
             className="mt-4 text-sm text-ieee-blue hover:text-ieee-dark font-semibold inline-flex items-center gap-1 group/link cursor-pointer"
             aria-label="Read more about this achievement"
           >
             <span>Learn about our journey</span>
-            <span className="transform transition-transform duration-200 group-hover/link:translate-x-1">→</span>
+            <span className="transform transition-transform duration-200 group-hover/link:translate-x-1">
+              →
+            </span>
           </a>
         </div>
       </div>

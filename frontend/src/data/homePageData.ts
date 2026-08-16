@@ -27,67 +27,82 @@ export const heroSlides = [
     title: "IEEE CODEBhoomi",
     subtitle:
       "Enabling digital literacy and technology education in rural communities near Pune. USD 5000 funded initiative.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80",
-    imageAlt: "IEEE CODEBhoomi — digital literacy programme for rural communities",
+    imageUrl: "/pic_ieeeupload/CB1.jpeg",
+    imageAlt:
+      "IEEE CODEBhoomi — digital literacy programme for rural communities",
   },
+
   {
     id: 2,
     badge: "NETWORKING",
-    title: "Next-Level Networking — YP Meet",
+    title: "Industry Conclave",
     subtitle:
       "Structured interaction between Young Professionals, student members, and mentors focused on career pathways.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80",
-    imageAlt: "IEEE YP Networking Meet — Pune Young Professionals community",
+    imageUrl: "/pic_ieeeupload/IC1.jpeg",
+    imageAlt:
+      "IEEE YP Networking Meet — Pune Young Professionals community",
   },
+
   {
     id: 3,
     badge: "INNOVATION",
-    title: "IEEE Day — Innoverse: Build the Future",
+    title: "Up Skills",
     subtitle:
-      "Innovation-focused event at MMCOE encouraging teams to prototype solutions for real-world challenges.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&q=80",
-    imageAlt: "IEEE Day Innoverse event at MMCOE Pune",
+      "Empowering students with industry-relevant knowledge, practical skills, and continuous learning opportunities to grow professionally.",
+    imageUrl: "/pic_ieeeupload/s1.png",
+    imageAlt: "IEEE Up Skills",
   },
+
   {
     id: 4,
     badge: "INITIATIVE",
-    title: "M&M — International Mentor-Mentee Initiative",
+    title: "YP-Funded Event",
     subtitle:
-      "Connecting Pune students with international IEEE mentors for structured research and publication opportunities.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&q=80",
-    imageAlt: "M&M International Mentor-Mentee Initiative by IEEE YP Pune",
+      "Supporting impactful student-led initiatives through funding, mentorship, and opportunities to turn innovative ideas into reality.",
+    imageUrl: "/pic_ieeeupload/ypf.jpg",
+    imageAlt: "YP Funded Event",
   },
+
   {
     id: 5,
     badge: "CAREER",
-    title: "Career Path Discovery Series",
+    title: "YP Team",
     subtitle:
-      "Structured interactions with experienced professionals sharing insights on entering and growing within career fields.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&q=80",
-    imageAlt: "Career Path Discovery Series — IEEE YP Pune professional development",
+      "A passionate community of young professionals driving innovation, collaboration, and leadership across the IEEE Pune Section.",
+    imageUrl: "/pic_ieeeupload/ieeep1.png",
+    imageAlt: "YP Team",
   },
+
+ {
+  id: 6,
+  badge: "POSTER",
+  title: "Posters",
+  subtitle:
+    "Engaging and creative visual content designed to showcase YP initiatives, events, achievements, and opportunities across the IEEE Pune Section.",
+  imageUrl: "/pic_ieeeupload/p2.png",
+  imageAlt: "YP Posters — IEEE YP Pune visual content",
+  imageSize: "90%",
+},
 ];
 
 // ---------------------------------------------------------------------------
 // ACHIEVEMENT CARD (right column of hero)
 // TODO: Replace with GET /api/achievements?featured=true
 // ---------------------------------------------------------------------------
+
 export const featuredAchievement = {
   id: "ach-yp-10years",
   badge: "MILESTONE",
   title: "10 Years of Continuous Activity — IEEE YP Pune",
-  imageUrl:
-    "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=600&q=80",
-  imageAlt: "IEEE YP Pune celebrating a decade of engagement and contribution",
-  body: "Established in 2016, the IEEE Pune Section Young Professionals Affinity Group celebrates a decade of engagement, learning, and contribution to the regional technology ecosystem with 500+ members across industry, academia, and government.",
+  imageUrl: "/pic_ieeeupload/ten.jpg",
+  imageAlt:
+    "IEEE YP Pune celebrating a decade of engagement and contribution",
+  body:
+    "Established in 2016, the IEEE Pune Section Young Professionals Affinity Group celebrates a decade of engagement, learning, and contribution to the regional technology ecosystem with 500+ members across industry, academia, and government.",
   linkText: "Learn about our journey →",
   linkHref: "#",
 };
+
 
 // ---------------------------------------------------------------------------
 // STATS BAR — YP-specific numbers
@@ -95,9 +110,9 @@ export const featuredAchievement = {
 // ---------------------------------------------------------------------------
 export const stats = [
   { id: "members",    value: 500,  suffix: "+",  display: "500+", label: "YP MEMBERS" },
-  { id: "activities", value: 23,   suffix: "+",  display: "23+",  label: "ACTIVITIES IN 2025" },
+  { id: "activities", value: 100,  suffix: "+",  display: "100+", label: "ACTIVITIES IN 2026" },
   { id: "years",      value: 10,   suffix: "",   display: "10",   label: "YEARS OF EXCELLENCE" },
-  { id: "ous",        value: 9,    suffix: "",   display: "9",    label: "OUs ENABLED" },
+  { id: "ous",        value: 25,   suffix: "+",  display: "25+",  label: "OUs ENABLED" },
 ];
 
 // ---------------------------------------------------------------------------
@@ -114,7 +129,7 @@ export const upcomingEvents = [
       "Closing phase hackathon of the CODEBhoomi initiative. Teams build solutions for rural community challenges in digital literacy and accessibility.",
     location: "Pune (Venue TBD)",
     imageUrl:
-      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&q=80",
+      "/pics/p1.PNG",
   },
   {
     id: "evt-congress-2026",
@@ -125,7 +140,7 @@ export const upcomingEvents = [
       "Section-level congress bringing together volunteers, leaders and chapter representatives for governance and planning.",
     location: "Pune",
     imageUrl:
-      "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=600&q=80",
+      "/pics/p2.PNG",
   },
   {
     id: "evt-cpds-2026",
@@ -136,7 +151,7 @@ export const upcomingEvents = [
       "Two virtual sessions with experienced professionals sharing structured insights on career pathways for early-career engineers.",
     location: "Online",
     imageUrl:
-      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&q=80",
+      "/pics/p3.PNG",
   },
 ];
 
@@ -188,12 +203,12 @@ export const grantsAndAwards = [
     category: "Grants & Funding",
     title: "IEEE CODEBhoomi Rural Literacy Grant",
     organization: "IEEE Humanitarian Activities Committee (HAC)",
-    amount: "USD $5,000",
+    amount: "USD $60,000+",
     year: "2024 – 2026",
     status: "Active Grant",
     badgeColor: "bg-emerald-500/10 text-emerald-600 border-emerald-500/20",
     icon: "Coins",
-    description: "Prestigious IEEE global funding allocated to establish computer laboratories and digital literacy programs across 3 rural schools surrounding Pune.",
+    description: "Prestigious IEEE global funding allocated to establish computer laboratories and digital literacy programs across rural schools surrounding Pune.",
     impact: "Impacted 1,200+ rural students with hands-on digital education.",
   },
   {
@@ -255,9 +270,18 @@ export const grantsAndAwards = [
 // ---------------------------------------------------------------------------
 export const navLinks = [
   { id: "nav-home",       label: "HOME",        emoji: "🏠", href: "/" },
-  { id: "nav-about",      label: "ABOUT",       emoji: "ℹ️", href: "/about" },
+  { 
+    id: "nav-about",      
+    label: "ABOUT",       
+    emoji: "ℹ️", 
+    href: "/about",
+    subLinks: [
+      { id: "sub-msg-chair", label: "Message from Chair", href: "/about#chair-message" },
+      { id: "sub-execom",    label: "Execom 2026",        href: "/about#execom2026" },
+      { id: "sub-about-yp",  label: "About IEEE YP Pune", href: "/about#about" },
+    ]
+  },
   { id: "nav-activities", label: "ACTIVITIES",  emoji: "📅", href: "/activities" },
-  { id: "nav-grants",     label: "GRANTS & AWARDS", emoji: "🏆", href: "/grants-awards" },
   { id: "nav-blogs",      label: "BLOGS",       emoji: "✍️", href: "/public-blogs" },
   { id: "nav-gallery",    label: "GALLERY",     emoji: "🖼️", href: "/public-gallery" },
   { id: "nav-contact",    label: "CONTACT",     emoji: "📞", href: "/contact" },
@@ -287,7 +311,7 @@ export const footerResourceLinks = [
   { id: "fr-opportunities", label: "Opportunities",     href: "#" },
   { id: "fr-eureka",      label: "EU-REKA",             href: "#" },
   { id: "fr-xplore",      label: "IEEE Xplore",         href: "https://ieeexplore.ieee.org" },
-  { id: "fr-join",        label: "Join IEEE",           href: "https://www.ieee.org/membership" },
+  { id: "fr-join",        label: "Join IEEE YP",        href: "https://www.ieee.org/membership-catalog/productdetail/showProductDetailPage.html?product=MEMYP060" },
 ];
 
 // ---------------------------------------------------------------------------
@@ -328,7 +352,7 @@ export const featuredActivity = {
   time: "09:30 AM – 04:30 PM",
   ctaText: "Register Now →",
   ctaHref: "#",
-  imageUrl: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=1600&q=80",
+  imageUrl: "/pics/b1.PNG",
   imageAlt: "Generative AI Workshop at PCCOE Pune — IEEE YP event",
 };
 
@@ -345,7 +369,7 @@ export const activitiesList = [
     subtitle: "Connect. Collaborate. Grow.",
     venue: "Startup Cafe, Pune",
     time: "06:00 PM – 08:00 PM",
-    imageUrl: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80",
+    imageUrl: "/pics/p4.PNG",
     imageAlt: "YP Networking Meet — young professionals gathering",
   },
   {
@@ -359,7 +383,7 @@ export const activitiesList = [
     subtitle: "Exploring cloud-native architectures.",
     venue: "COEP Technological University",
     time: "11:00 AM – 01:00 PM",
-    imageUrl: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&q=80",
+    imageUrl: "/pics/p5.PNG",
     imageAlt: "Tech Talk on cloud computing — IEEE YP Pune",
   },
   {
@@ -373,7 +397,7 @@ export const activitiesList = [
     subtitle: "From data wrangling to ML pipelines.",
     venue: "PCCOE, Pune",
     time: "10:00 AM – 04:00 PM",
-    imageUrl: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&q=80",
+    imageUrl: "/pics/p3.PNG",
     imageAlt: "Data Science Workshop — IEEE YP Pune",
   },
   {
@@ -387,7 +411,7 @@ export const activitiesList = [
     subtitle: "Bridging academia and industry.",
     venue: "TBD",
     time: "05:00 PM – 07:30 PM",
-    imageUrl: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=600&q=80",
+    imageUrl: "/pic_ieeeupload/IC.jpeg",
     imageAlt: "Industry Connect session — IEEE YP Pune",
   },
   {
@@ -401,7 +425,7 @@ export const activitiesList = [
     subtitle: "Tech solutions for rural India.",
     venue: "MIT-WPU, Pune",
     time: "09:00 AM – 06:00 PM",
-    imageUrl: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80",
+    imageUrl: "/pics/p1.PNG",
     imageAlt: "CODEBhoomi Hackathon at MIT-WPU",
   },
   {
@@ -415,7 +439,7 @@ export const activitiesList = [
     subtitle: "Shaping the next generation of tech leaders.",
     venue: "ITC Grand, Pune",
     time: "10:00 AM – 05:00 PM",
-    imageUrl: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=600&q=80",
+    imageUrl: "/pics/p6.PNG",
     imageAlt: "YP Leadership Summit — IEEE Pune",
   },
   // Past events
@@ -430,7 +454,7 @@ export const activitiesList = [
     subtitle: "Build. Innovate. Transform.",
     venue: "PCCOE, Pune",
     time: "09:30 AM – 04:30 PM",
-    imageUrl: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=600&q=80",
+    imageUrl: "/pics/p3.PNG",
     imageAlt: "Generative AI Workshop — past event",
   },
   {
@@ -444,7 +468,7 @@ export const activitiesList = [
     subtitle: "Build the Future through innovation.",
     venue: "MMCOE, Pune",
     time: "10:00 AM – 05:00 PM",
-    imageUrl: "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600&q=80",
+    imageUrl: "/pics/b3.PNG",
     imageAlt: "IEEE Day Innoverse — MMCOE Pune",
   },
   {
@@ -458,7 +482,7 @@ export const activitiesList = [
     subtitle: "Inspiring the next wave of women engineers.",
     venue: "Symbiosis Institute, Pune",
     time: "02:00 PM – 05:00 PM",
-    imageUrl: "https://images.unsplash.com/photo-1573164713988-8665fc963095?w=600&q=80",
+    imageUrl: "/pics/p7.PNG",
     imageAlt: "Women in Tech Panel — IEEE YP Pune",
   },
   {
@@ -472,7 +496,7 @@ export const activitiesList = [
     subtitle: "Behind the scenes of automation engineering.",
     venue: "Siemens Technology Center, Pune",
     time: "10:00 AM – 01:00 PM",
-    imageUrl: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&q=80",
+    imageUrl: "/pic_ieeeupload/IC1.jpeg",
     imageAlt: "Industry Visit to Siemens — IEEE YP Pune",
   },
   {
@@ -486,7 +510,7 @@ export const activitiesList = [
     subtitle: "Securing the digital frontier.",
     venue: "VIT Pune",
     time: "11:00 AM – 01:30 PM",
-    imageUrl: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&q=80",
+    imageUrl: "/pics/p5.PNG",
     imageAlt: "Cybersecurity Essentials — IEEE YP Pune talk",
   },
   {
@@ -500,7 +524,7 @@ export const activitiesList = [
     subtitle: "International mentor matchmaking session.",
     venue: "Online",
     time: "06:00 PM – 08:00 PM",
-    imageUrl: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&q=80",
+    imageUrl: "/pics/b4.PNG",
     imageAlt: "M&M Mentor Connect — IEEE YP Pune virtual event",
   },
 ];
@@ -513,31 +537,31 @@ export const pastMoments = [
   {
     id: "pm-ieee-day",
     label: "IEEE Day 2024",
-    imageUrl: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&q=80",
+    imageUrl: "/pic_ieeeupload/n1.jpg",
     imageAlt: "IEEE Day 2024 celebration — group photo",
   },
   {
     id: "pm-wit",
     label: "Women in Tech Panel",
-    imageUrl: "https://images.unsplash.com/photo-1573164713988-8665fc963095?w=400&q=80",
+    imageUrl: "/pic_ieeeupload/n2.jpg",
     imageAlt: "Women in Tech Panel — audience and speakers",
   },
   {
     id: "pm-codebhoomi",
     label: "CODEBhoomi 2024",
-    imageUrl: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&q=80",
+    imageUrl: "/pic_ieeeupload/CB.jpeg",
     imageAlt: "CODEBhoomi 2024 — volunteers and participants",
   },
   {
     id: "pm-siemens",
     label: "Industry Visit — Siemens",
-    imageUrl: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=400&q=80",
+    imageUrl: "/pic_ieeeupload/IC.jpeg",
     imageAlt: "Industry Visit to Siemens Technology Center",
   },
   {
     id: "pm-retreat",
     label: "Leadership Retreat",
-    imageUrl: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=400&q=80",
+    imageUrl: "/pic_ieeeupload/ieeep1.png",
     imageAlt: "YP Leadership Retreat — outdoor team activity",
   },
 ];

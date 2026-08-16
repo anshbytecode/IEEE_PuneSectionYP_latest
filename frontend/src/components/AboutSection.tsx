@@ -9,7 +9,7 @@ const highlights = [
   { value: '2016', label: 'Year Established' },
   { value: '500+', label: 'Active Members' },
   { value: '10',   label: 'Years of Excellence' },
-  { value: '23+',  label: 'Activities in 2025' },
+  { value: '100+', label: 'Activities in 2026' },
 ];
 
 /**
