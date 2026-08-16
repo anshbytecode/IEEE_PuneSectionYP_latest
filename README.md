@@ -34,4 +34,4 @@ A full-stack web application for the **IEEE Young Professionals Pune Section**, 
 
 To provide a scalable and engaging digital platform for IEEE Young Professionals Pune Section while enabling easy content management through a CMS.
 
-https://ieeepuneyp.vercel.app/
+https://ieee-pune-section-yp-latest-omega.vercel.app/
